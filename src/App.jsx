@@ -1,15 +1,18 @@
+import { BrowserRouter, Routes, Route } from "react-router";
 import Gallery from "./components/Gallery";
 import Home from "./components/Home";
-import { BrowserRouter, Routes, Route } from "react-router";
+import NavLayout from "./components/NavLayout";
 import Safety from "./components/Safety";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="safety" element={<Safety />} />
+        <Route element={<NavLayout />}>
+          <Route index element={<Home />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="safety" element={<Safety />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
