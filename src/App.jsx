@@ -1,10 +1,17 @@
-import "./App.css";
+import Gallery from "./components/Gallery";
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Safety from "./components/Safety";
 
 function App() {
   return (
-    <>
-      <div className="m-4">Hello world</div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="safety" element={<Safety />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
