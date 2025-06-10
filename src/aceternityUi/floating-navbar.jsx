@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { cn } from "../lib/utils";
+import { Tooltip } from "@mui/material";
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
@@ -50,18 +51,20 @@ export const FloatingNav = ({ navItems, className }) => {
         )}
       >
         {navItems.map((navItem, idx) => (
-          <a
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-blue-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-xl text-shadow-sm hover:text-shadow-lg ">
-              {navItem.name}
-            </span>
-          </a>
+          <Tooltip title={navItem.message} arrow>
+            <a
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-700 dark:hover:text-neutral-300 hover:text-blue-500"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="hidden sm:block text-xl text-shadow-sm hover:text-shadow-lg ">
+                {navItem.name}
+              </span>
+            </a>
+          </Tooltip>
         ))}
       </motion.div>
     </AnimatePresence>
