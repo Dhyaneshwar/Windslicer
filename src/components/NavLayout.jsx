@@ -1,25 +1,28 @@
 import React from "react";
 import { Outlet } from "react-router";
 import { FloatingNav } from "../aceternityUi/floating-navbar";
+import {
+  galleryTooltip,
+  homeTooltip,
+  safetyTooltip,
+} from "../constant/nav-bar";
+import Footer from "./Footer";
 
 function NavLayout() {
   const navItems = [
     {
       name: "Home",
-      message:
-        "Windslicer paddles and why narrow blades are good for sea kayaking.",
+      message: homeTooltip,
       link: "/",
     },
     {
       name: "Gallery",
-      message:
-        "Details of native paddles from museums and Windslicer paddles for comparison",
+      message: galleryTooltip,
       link: "/gallery",
     },
     {
       name: "Safety",
-      message:
-        "Kayak test reports and articles concentrating on buoyancy design and  improvement in recovery potential. These reports are not available elsewhere.",
+      message: safetyTooltip,
       link: "/safety",
     },
   ];
@@ -28,6 +31,7 @@ function NavLayout() {
     <div className="relative w-full">
       <FloatingNav navItems={navItems} />
       <Outlet />
+      <Footer />
     </div>
   );
 }
