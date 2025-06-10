@@ -1,6 +1,6 @@
 export const welcomeMsg = "Welcome to";
 
-export const windslicerPaddles = "Windslicer paddles!";
+export const windslicerPaddles = "Windslicer Paddles!";
 
 export const windslicerIntro =
   "Windslicer paddles are hand made, Greenland-style sea kayak blades in manufacture since 1985. Standard, ‘storm’ or jointed paddles are available to order.";
