@@ -1,33 +1,44 @@
 import React from "react";
-import { windslicerIntro, welcomeMsg, downloadFiles } from "../constant/home";
+import {
+  windslicerIntro,
+  welcomeMsg,
+  windslicerPaddles,
+  downloadFiles,
+} from "../constant/home";
 import HomePageWrapper from "./HomePageWrapper";
 import { Button, Fab } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
+import { ColoredText } from "../aceternityUi/ColoredText";
 
 function Home() {
   return (
     <HomePageWrapper>
-      <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-        {welcomeMsg}
+      <div className="flex justify-center items-center text-3xl md:text-7xl font-bold dark:text-white text-center">
+        <div className="my-12 mt-20">
+          <p className="text-lg md:text-5xl">{welcomeMsg}</p>
+          <ColoredText text={windslicerPaddles} />
+        </div>
       </div>
-      <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 py-4 px-10 text-justify">
-        {windslicerIntro}
+      <div className="flex max-lg:flex-col flex-row items-center mx-10 -mt-10 gap-5">
+        <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 px-10 text-justify">
+          {windslicerIntro}
+        </div>
+        <img
+          src="./assets/paddles.jpg"
+          alt="A Selection of Windslicer blades"
+          className="max-md:w-2/3 h-auto rounded-2xl"
+        />
       </div>
-      <img
-        src="./assets/paddles.jpg"
-        alt="A Selection of Windslicer blades"
-        className="max-md:w-2/3 max-lg:w-1/2 h-auto"
-      />
-      <div className="flex justify-around w-full flex-wrap gap-8">
+      <div className="flex justify-around w-full flex-wrap gap-8 mt-4">
         {downloadFiles.map((file, idx) => (
           <Button
             key={idx}
             variant="outlined"
             href={file.href}
             target="_blank"
-            className="flex justify-center"
+            className="flex justify-center rounded-3xl max-md:w-1/2"
           >
-            <Fab color="primary" aria-label="add">
+            <Fab color="primary" aria-label="add" size="medium">
               <DownloadIcon />
             </Fab>
             <div className="pl-4 flex flex-col">
