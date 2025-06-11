@@ -37,7 +37,7 @@ export const kayakSafetyContent = {
     "These three features confer a superior safety performance compared with conventional kayaks manufactured with bulkheads and no solid buoyancy that are commonly available up to the present in 2013. This safety performance follows some simple physics. It has been demonstrated by experimentation and several reported incidents tend to support the predicted outcome.",
     "During the 1980s and 1990s some key members of the UK kayak trade opposed the new design. As a result the advantages of the new buoyancy design were not promoted and test reports were not properly publicised.",
     () => (
-      <p className="text-justify text-xl">
+      <p className="text-justify max-md:text-sm text-xl">
         The links{" "}
         <a href="#tests" className="text-blue-600 underline">
           below
@@ -70,7 +70,7 @@ export const documentLinks = {
   heading: "Document links",
   paragraphs: [
     () => (
-      <p className="text-justify text-xl">
+      <p className="text-justify max-md:text-sm text-xl">
         Please note the links below are to PDF files, some of which are large.
         File size, numbers of pages and photographs are listed in each link. PDF
         files are best saved first then viewed in Adobe Reader, a free program (
@@ -353,12 +353,12 @@ export const authorContent = {
   paragraphs: [
     () => (
       <ul className="space-y-3 text-justify">
-        <li className="text-justify text-xl">
+        <li className="text-justify max-md:text-sm text-xl">
           <strong>Peter Lamont:</strong> 44 years paddling, including 15 years
           instructing beginners and novices on multiday expeditions in the
           waters around the Corryvreckan, Scotland
         </li>
-        <li className="text-justify text-xl">
+        <li className="text-justify max-md:text-sm text-xl">
           <strong>Peter Carter:</strong> 40 years paddling and instructing and a
           member of the Australian Canoeing Education and Safety Technical
           Committee (
@@ -372,7 +372,7 @@ export const authorContent = {
           </a>
           ).
         </li>
-        <li className="text-justify text-xl">
+        <li className="text-justify max-md:text-sm text-xl">
           <strong>Alan Byde:</strong> now retired, was one of the first senior
           BCU Coaches in the early 1960s and has written several books on
           canoeing and canoe construction

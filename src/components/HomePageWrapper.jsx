@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 function HomePageWrapper({ children }) {
   return (
-    <AuroraBackground>
+    <AuroraBackground childClassname="px-0">
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -13,7 +13,7 @@ function HomePageWrapper({ children }) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="relative flex flex-col gap-4 items-center justify-center"
       >
         {children}
       </motion.div>

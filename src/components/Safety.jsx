@@ -19,7 +19,7 @@ import { ExpandableCard } from "../aceternityUi/ExpandableCard";
 function Safety() {
   return (
     <AuroraBackground childClassname="">
-      <div className="text-5xl font-bold mt-10 mb-4 text-center text-shadow-lg">
+      <div className="max-md:text-xl text-5xl font-bold mt-10 mb-4 text-center text-shadow-lg">
         {header}
       </div>
 
@@ -40,14 +40,17 @@ function Safety() {
 
         <DisplayContent content={documentLinks} />
       </div>
-      <h2 id="tests" className="text-center text-2xl font-bold text-indigo-900">
+      <h2
+        id="tests"
+        className="text-center max-md:text-lg text-2xl font-bold text-indigo-900"
+      >
         Test reports and other references
       </h2>
 
       <ExpandableCard cards={testCards} />
 
       <section className="px-20 text-slate-800">
-        <p className="font-semibold text-indigo-900 text-justify text-xl mt-4 mb-8">
+        <p className="font-semibold text-indigo-900 text-justify max-md:text-sm text-xl mt-4 mb-8">
           {testsConclusion}
         </p>
 
