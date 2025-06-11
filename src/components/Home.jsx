@@ -13,14 +13,14 @@ import { ColoredText } from "../aceternityUi/ColoredText";
 function Home() {
   return (
     <HomePageWrapper>
-      <div className="flex justify-center items-center text-3xl md:text-7xl font-bold dark:text-white text-center">
+      <div className="flex justify-center items-center text-3xl md:text-7xl font-bold text-center">
         <div className="my-12 mt-20">
           <p className="text-lg md:text-5xl">{welcomeMsg}</p>
           <ColoredText text={windslicerPaddles} />
         </div>
       </div>
       <div className="flex max-lg:flex-col flex-row items-center mx-10 -mt-10 gap-5">
-        <div className="font-extralight text-base md:text-3xl dark:text-neutral-200 px-10 text-justify">
+        <div className="font-extralight text-base md:text-3xl px-10 text-justify">
           {windslicerIntro}
         </div>
         <img

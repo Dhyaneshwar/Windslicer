@@ -44,14 +44,14 @@ export function ExpandableCard({ cards }) {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-1/2 flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-1/2 flex flex-col bg-white sm:rounded-3xl overflow-hidden"
             >
               <div>
                 <div className="flex flex-1 justify-between items-start p-4">
                   <div className="basis-4/5">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                      className="font-bold text-neutral-700"
                     >
                       {active.title}
                     </motion.h3>
@@ -96,19 +96,19 @@ export function ExpandableCard({ cards }) {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-blue-300 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-blue-300 rounded-xl cursor-pointer"
           >
             <div className="flex flex-1 gap-4 flex-col md:flex-row ">
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-neutral-800 text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
