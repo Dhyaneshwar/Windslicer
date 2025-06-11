@@ -1,6 +1,7 @@
 import React from "react";
 import { AuroraBackground } from "../aceternityUi/aurora-background";
 import {
+  authorContent,
   documentLinks,
   header,
   introductionContent,
@@ -9,28 +10,11 @@ import {
   safetyImg1,
   safetyImg2,
   safetyVsPaddledPerformance,
+  testCards,
+  testsConclusion,
 } from "../constant/safety";
-import { SafetyBentoGrid } from "./SafetyBentoGrid";
-
-const DisplayContent = ({ content }) => {
-  return (
-    <>
-      <h2 className="text-2xl font-bold text-indigo-900">{content.heading}</h2>
-      {content.paragraphs.map((para, index) => (
-        <>
-          {typeof para === "function" ? (
-            <div key={index}>{para()}</div>
-          ) : (
-            <p key={index} className="text-justify text-xl">
-              {para}
-            </p>
-          )}
-          <br />
-        </>
-      ))}
-    </>
-  );
-};
+import DisplayContent from "../lib/DisplayContent";
+import { ExpandableCard } from "../aceternityUi/ExpandableCard";
 
 function Safety() {
   return (
@@ -55,11 +39,20 @@ function Safety() {
         <DisplayContent content={safetyVsPaddledPerformance} />
 
         <DisplayContent content={documentLinks} />
-
-        <h2 id="tests" className="text-2xl font-bold text-indigo-900">
-          Test reports and other references
-        </h2>
       </div>
+      <h2 id="tests" className="text-center text-2xl font-bold text-indigo-900">
+        Test reports and other references
+      </h2>
+
+      <ExpandableCard cards={testCards} />
+
+      <section className="px-20 text-slate-800">
+        <p className="font-semibold text-indigo-900 text-justify text-xl mt-4 mb-8">
+          {testsConclusion}
+        </p>
+
+        <DisplayContent content={authorContent} />
+      </section>
     </AuroraBackground>
   );
 }
