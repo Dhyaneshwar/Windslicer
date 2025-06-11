@@ -26,11 +26,19 @@ function Safety() {
       <div className="px-20">
         <DisplayContent content={introductionContent} />
 
-        <div className="flex gap-4 justify-center">
+        <div className="flex max-md:hidden gap-4 justify-center">
           <DisplayContent content={safetyImg1} />
           <DisplayContent content={safetyImg2} />
         </div>
         <br />
+
+        <div className="max-md:block hidden">
+          <DisplayContent content={safetyImg1} />
+        </div>
+
+        <div className="max-md:block hidden">
+          <DisplayContent content={safetyImg2} />
+        </div>
 
         <DisplayContent content={kayakSafetyContent} />
 
