@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="flex max-md:flex-col max-md:gap-10 max-md:items-center items-center justify-between  bg-black/80 p-4 text-white text-lg max-md:text-md font-bold">
+      <div className="flex max-md:flex-col max-md:gap-4 max-md:items-center items-center justify-between  bg-black/80 p-4 text-white text-lg max-md:text-md font-bold">
         <div className="flex-1 max-md:text-center text-left">
           <span className="max-md:inline block text-sm">
             info@windslicer.co.uk
