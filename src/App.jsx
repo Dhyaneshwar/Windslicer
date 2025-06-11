@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<NavLayout />}>
-          <Route path="home" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="safety" element={<Safety />} />
         </Route>
