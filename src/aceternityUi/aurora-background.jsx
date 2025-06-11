@@ -5,6 +5,7 @@ import React from "react";
 export const AuroraBackground = ({
   className,
   children,
+  childClassname = "px-20",
   showRadialGradient = true,
   ...props
 }) => {
@@ -48,7 +49,7 @@ export const AuroraBackground = ({
             )}
           ></div>
         </div>
-        {children}
+        <div className={`z-50 ${childClassname}`}>{children}</div>
       </div>
     </main>
   );
